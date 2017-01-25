@@ -1,0 +1,26 @@
+{% extends 'resume/base.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+<br/>
+<br/>
+<div class="container desc">
+		<div class="row">
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>WANT TO HEAR BACK FROM ME?</h5>
+				</div>
+				<div class="col-lg-2">
+					<h1>Contact</h1>
+					<form role="form" action="" method="post">
+					    {% csrf_token %}
+					    {{ form|crispy }}
+					    <br/>
+					    <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+					<sm><i class="icon-tag"></i> contact</sm></more> 
+				</p>
+				</div>
+		
+		</div><!--/.row -->
+</div>
+{% endblock %}
