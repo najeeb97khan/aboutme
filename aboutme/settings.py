@@ -148,3 +148,4 @@ try:
 except ImportError:
     pass
 
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
