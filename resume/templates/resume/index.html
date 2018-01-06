@@ -1,297 +1,424 @@
 {% extends 'resume/base.html' %}
-{% load static %}
+{% load staticfiles %}
 {% block content %}	
-	<div id="headerwrap">
-		<div class="container">
-			<div class="row centered">
-				<div class="col-lg-12">
-					<h1>Najeeb Khan</h1>
-					<h3>Undergrad @ JMI-FET | najeeb.khan96@gmail.com</h3>
-				</div><!--/.col-lg-12 -->
-			</div><!--/.row -->
-		</div><!--/.container -->
-	</div><!--/.#headerwrap -->
-	
 
-	<section id="about" name="about"></section>
-	<div id="intro">
-		<div class="container">
-			<div class="row">
-				
-				<div class="col-lg-2 col-lg-offset-1">
-					<h5>ABOUT</h5>
-				</div>
-				<div class="col-lg-6">
-					<p>I am an undergraduate student at the Department Of Computer Engineering, Jamia Millia Islamia (A central university by an act of parliament). I am a machine learning practitioner and loves playing with datasets. My specific interests include Deep Learning and Visualization. I also blog @ <a href="najeeb97khan.github.io">najeeb97khan.gihub.io</a></p>
-				</div>
-				
-			</div><!--/.row -->
-		</div><!--/.container -->
-	</div><!--/ #intro -->
+<div id="header" class="bg1">
+  <div id="topnav">
+    <ul>
+      <li><a href="http://najeeb97khan.github.io/">blog</a></li>
+    </ul>
+  </div>
+  <div id="headerblob">
+    <img src="{% static 'resume/img/me2.jpg' %}" class="img-circle imgme">
+    <div id="headertext">
+      <div id="htname">Najeeb Khan</div>
+      <div id="htdesc">UnderGraduate at Jamia Millia Islamia</div>
+      <div id="htem"><a href="{% url 'contact' %}">najeeb.khan96 @ gmail.com</a></div>
+      <div id="htem"><a href="{% url 'contact' %}">najeeb146717 @ st.jmi.ac.in</a></div>
+      <div id="icons">
+        <div class="svgico">
+          <a href="https://twitter.com/najeeb1997"><img src="{% static 'resume/img/icons/twitter.svg' %}" style="max-width:80%;"></a>
+        </div>
+        <div class="svgico">
+          <a href="https://www.linkedin.com/in/najeebkhan97/"><img src="{% static 'resume/img/icons/in.png' %}" width="46px"></a>
+        </div>
+        <div class="svgico">
+          <a href="https://github.com/najeeb97khan"><img src="{% static 'resume/img/icons/octocat.svg' %}"  width="46px"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class="container">
+  <div id="timeline">
+    <div class="timelineitem">
+      <div class="tdate">2014 -</div>
+      <div class="ttitle">UnderGrad @ Jamia Millia Islamia</div>
+      <div class="tdesc">Computer Science and Engineering</div>
+    </div>
+    <div class="timelineitem">
+      <div class="tdate">Summer 2017</div>
+      <div class="ttitle">Research Intern<a href="#" target="_blank"> IIIT, Delhi</a></div>
+      <div class="tdesc">Natural Language Processing, Statistical Machine Learning, Web Development</div>
+    </div>
+    <div class="timelineitem">
+      <div class="tdate">Spring 2017</div>
+      <div class="ttitle">Participant<a href="#" target="_blank"> Smart India Hackathon, Ahmedabad, Gujarat</a></div>
+      <div class="tdesc">Spam Classification Using Deep Learning</div>
+    </div>
+    <div class="timelineitem">
+      <div class="tdate">Summer 2016</div>
+      <div class="ttitle">Internship @ CIE, Jamia Millia Islamia</div>
+      <div class="tdesc">Abstractive Summarisation Using Deep Learning</div>
+    </div>
+    <div class="timelineitem">
+      <div class="tdate">2012 - 2014</div>
+      <div class="ttitle">Senior Secondary School</div>
+      <div class="tdesc">Jamia Millia Islamia</div>
+    </div>
+  </div>
+</div>
 
-	<section id="resume" name="resume"></section>
-	<!--EDUCATION DESCRIPTION -->
-	<div class="container desc">
-		<div class="row">
+<div class="container" style="font-size:18px; font-weight:300;margin-top:50px;margin-bottom:50px;">
+  <b>Bio</b>.I am an undergraduate student at Department Of Computer Engineering, Jamia Millia Islamia (A central university by an act of Parliament). I am a machine learning enthusiast with hands on experience with various practical aspects of Machine Learning and Deep Learning. I also have a background with Statistical Learning and Analysis. I have a deep knack of organising things and loves to watch fiction. I also blog @ <a href="najeeb97khan.github.io">najeeb97khan.github.io.</a>
+  <br><br>
+  I love taking up projects for fun and make sure they see the light of the day. I keep a record of some of my delectable projects at <a href="https://github.com/najeeb97khan">GitHub</a> so feel free to check them out!
 
-				<div class="col-lg-2 col-lg-offset-1">
-					<h5>EDUCATION</h5>
-				</div>
-				<div class="col-lg-6">
-					<p><t>Bachelor Of Technology</t><br/>
-						Jamia Millia Islamia <br/>
-						<i>4 Years Course</i>
-					</p>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>GRADUATING IN MAY 2018</sm><br/>
-					<imp><sm>IN PROGRESS</sm></imp>
-					</p>
-				</div>
-	
-				<div class="col-lg-6 col-lg-offset-3">
-					<p><t>Class XII @ Jamia Senior Secondary School</t><br/>
-						Jamia Millia Islamia<br/>
-					</p>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>JUNE 2014</sm></p>
-				</div>
-	
-		</div><!--/.row -->
-		<br>
-		<hr>
-	</div><!--/.container -->
-	
-	
-	<!--WORK DESCRIPTION -->
-	<div class="container desc">
-		<div class="row">
+  <br><br>
+  <b>Education</b>.
+  <br>
+  <span class="t2when">Graduating in 2018</span>
+  <span class="t2who">UnderGraduate at <a href="https://jmi.ac.in/" target="_blank">Jamia Millia Islamia</a></span>
+  <span class="t2what">Computer Science and Engineering</span>
 
-				<div class="col-lg-2 col-lg-offset-1">
-					<h5>PROJECTS</h5>
-				</div>
-				<div class="col-lg-6">
-					<p><t>Center For Innovation And Entrepreneurship</t><br/>
-						Jamia Millia Islamia<br/>
-					</p>
-					<p><more>Research project aimed at developing an automatic tweet generator based on Abstractive Summarisation technique and Deep Learning Models. Repository for the project can be found at <a href='https://github.com/najeeb97khan/mynz_jmi'>https://github.com/najeeb97khan/mynz_jmi</a></more></p>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>JUNE 2016</sm></p>
-				</div>
-	
-				<div class="col-lg-6 col-lg-offset-3">
-					<p><t>Extractive Summarisation Using Information Diffusion Model</t><br/>
-					</p>
-					<p><more>Research project aimed at using Information Diffusion model to increase the effectiveness and quality of summarisation. Repository for the above can be found at <a href='https://github.com/najeeb97khan/ShapSum'>https://github.com/najeeb97khan/ShapSum</a></more></p>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>AUGUST 2016</sm></p>
-				</div>
+  <br>
+  <span class="t2when">2012-2014</span>
+  <span class="t2who">Senior Secondary School</span>
+  <span class="t2what">Jamia Millia Islamia</span>
 
-				<div class="col-lg-6 col-lg-offset-3">
-					<p><t>Leaf Classification Through Deep Learning</t><br/>
-					</p>
-					<p><more>Kaggle Competition for classifying different species of leaves based on their features such as margin width, length etc. Currently in top 20 percentile on the global leaderboard.
-					Repository can be found at <a href='https://github.com/najeeb97khan/Kaggle/tree/master/Leaf%20Classification'> https://github.com/najeeb97khan/Kaggle/tree/master/Leaf%20Classification</a>
-					<br/>Technologies Used : Neural Networks, Python programming
-					</a></more></p>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>OCT 2016</sm></p>
-				</div>
-				<div class="col-lg-6 col-lg-offset-3">
-					<p><t>Understanding Success Of Altruistic Requests (Random Acts Of Pizza)</t><br/>
-					</p>
-					<p><more>Understanding what contributes to the success of altruistic requests. Requests comes in various shapes and sizes and using machine learning models coupled with clever feature engineering it is possible to both predict and get a sense of what constitutes for a successful request in a social community <a href='https://github.com/najeeb97khan/Random_Acts_Of_Pizza'> https://github.com/najeeb97khan/Random_Acts_Of_Pizza</a>
-					<br/>Technologies Used : Machine learning models, Python programming, Random Acts Of Pizza dataset.
-					</a></more></p>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>DEC 2016 - CURRENT</sm></p>
-				</div>
-		</div><!--/.row -->
-		<br>
-		<hr>
-	</div><!--/.container -->
+  <br><br>
+  <!-- <b>News</b>.
+  <br>June 2017: I joined Tesla as the Director of AI. (<a href="https://techcrunch.com/2017/06/20/tesla-hires-deep-learning-expert-andrej-karpathy-to-lead-autopilot-vision/">TechCrunch article</a>)
+  <br>June 2017: Gave a talk on "Where will AGI come from?" <a href="http://bit.ly/2r54rfe">(slides)</a>
+  <br>Feb 2017: Joined the steering committee of <a href="http://distill.pub/about/">distill.pub</a>!
+  <br>Jan 2017: Chatted with <a href="https://nathanbenaich.github.io/">Nathan Benaich</a> at REWORK. (<a href="http://videos.re-work.co/videos/344-interview-with-andrej-karpathy-openai">video</a>)
+  <br>Dec 2016: Started a <a href="https://medium.com/@karpathy">Medium blog</a> for smaller/shorter blog posts, in addition to my <a href="https://karpathy.github.io/">usual one</a>. -->
 
+</div>
 
-	<!--EXPERIENCE DESCRIPTION -->
-	<div class="container desc">
-		<div class="row">
-				<div class="col-lg-2 col-lg-offset-1">
-					<h5>EXPERIENCE</h5>
-				</div>
-				<div class="col-lg-6">
-					<p><t>PROJECT LEAD</t><br/>
-						Center for Innovation and Entrepreneurship <br/>
-						<more>Project Lead for a research based project aimed at developing attention model to generate syntactically and semantically valid tweets in real time. The project used various tools and applications of Natural Language Processing (NLP) and Deep Learning</more>
-					</p>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>AUGUST 2016</sm></p>
-				</div>
-	
-				<div class="col-lg-6 col-lg-offset-3">
-					<p><t>Instructor</t><br/>
-						SCONJ Hour Of Code
-					</p>
-					<p><more>Hour of Code is an initiative by a group of machine learning enthusiasts at Department Of Computer Science and Engineering, Jamia Millia Islamia. It aims towards spreading knowledge about one of the most intriguing fields of Computer Science i.e. Machine Learning and Artificial Intelligence in general.</more></p>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>2013</sm></p>
-				</div>
-		
-		</div><!--/.row -->
-		<br>
-	</div><!--/.container -->
-	
-	
-	<!--SKILLS DESCRIPTION -->
-	<div id="skillswrap">
-		<div class="container">
-			<div class="row">
-					<div class="col-lg-2 col-lg-offset-1">
-						<h5>SKILLS</h5>
-					</div>
-					<div class="col-lg-3 centered">
-						<canvas id="javascript" height="130" width="130"></canvas>
-						<p>Python Programming</p>
-						<br>
-						<script>
-							var doughnutData = [
-									{
-										value: 80,
-										color:"#1abc9c"
-									},
-									{
-										value : 20,
-										color : "#ecf0f1"
-									}
-								];
-								var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
-						</script>
-					</div>
-					<div class="col-lg-3 centered">
-						<canvas id="bootstrap" height="130" width="130"></canvas>
-						<p>Machine Learning Concepts</p>
-						<br>
-						<script>
-							var doughnutData = [
-									{
-										value: 60,
-										color:"#1abc9c"
-									},
-									{
-										value : 40,
-										color : "#ecf0f1"
-									}
-								];
-								var myDoughnut = new Chart(document.getElementById("bootstrap").getContext("2d")).Doughnut(doughnutData);
-						</script>
-					</div>
-					<div class="col-lg-3 centered">
-						<canvas id="wordpress" height="130" width="130"></canvas>
-						<p>Statistical Learning</p>
-						<br>
-						<script>
-							var doughnutData = [
-									{
-										value: 50,
-										color:"#1abc9c"
-									},
-									{
-										value : 50,
-										color : "#ecf0f1"
-									}
-								];
-								var myDoughnut = new Chart(document.getElementById("wordpress").getContext("2d")).Doughnut(doughnutData);
-						</script>
-					</div>
-					
-					<div class="col-lg-3 col-lg-offset-3 centered">
-						<canvas id="html" height="130" width="130"></canvas>
-						<p>Data Structures and Algorithms</p>
-						<br>
-						<script>
-							var doughnutData = [
-									{
-										value: 40,
-										color:"#1abc9c"
-									},
-									{
-										value : 60,
-										color : "#ecf0f1"
-									}
-								];
-								var myDoughnut = new Chart(document.getElementById("html").getContext("2d")).Doughnut(doughnutData);
-						</script>
-					</div>
-					<div class="col-lg-3 centered">
-						<canvas id="photoshop" height="130" width="130"></canvas>
-						<p>Deep Learning</p>
-						<br>
-						<script>
-							var doughnutData = [
-									{
-										value: 40,
-										color:"#1abc9c"
-									},
-									{
-										value : 60,
-										color : "#ecf0f1"
-									}
-								];
-								var myDoughnut = new Chart(document.getElementById("photoshop").getContext("2d")).Doughnut(doughnutData);
-						</script>
-					</div>
-					<div class="col-lg-3 centered">
-						<canvas id="illustrator" height="130" width="130"></canvas>
-						<p>Data Visualisation</p>
-						<br>
-						<script>
-							var doughnutData = [
-									{
-										value: 50,
-										color:"#1abc9c"
-									},
-									{
-										value : 50,
-										color : "#ecf0f1"
-									}
-								];
-								var myDoughnut = new Chart(document.getElementById("illustrator").getContext("2d")).Doughnut(doughnutData);
-						</script>
-					</div>
+<hr class="soft">
 
-			</div><!--/.row -->
-			<br>
-		</div><!--/.container -->
-	</div><!--/ #skillswrap -->
+<div class="container">
+  <h2>Projects</h2>
+  <div id="pubs">
 
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="{% static 'resume/img/cloning.jpg' %}" style="max-width:95%;">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">CloneLearn: Cloning Machine Learning Models using Randomly Generated Data from a Uniform Distribution</div>
+            <div class="pubd">This project aims at trying to uncover whether machine learning models can be cloned using a different machine learning model without having any prior knowledge of how the other model was trained or on what kind of data it was trained on.</div>
+            <div class="puba">Najeeb Khan, Mridul Gupta, Prof. Debarka Sengupta</div>
+            <!-- <div class="pubv">CVPR 2016 (Oral)</div> -->
+            <div class="publ">
+              <ul>
+                <!-- <li><a href="densecap">Project</a></li> -->
+                <!-- <li><a href="densecap.pdf">PDF</a></li> -->
+                <li><a href="https://github.com/najeeb97khan/Cloning">Code (Github)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row">
+        <img src="densecap_more.jpg" style="max-width:100%; margin-top:30px;">
+      </div> -->
+    </div>
 
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="{% static 'resume/img/autointraviewer_1.png' %}">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">AutoIntraviewer: Automating Interview Process through Natural Language Processing</div>
+            <div class="pubd">This project is a budding startup in partnership with IIIT-Delhi Incubation Center and Gemini Solutions Pvt. Ltd. The aim is to de-intensify the menial work of selecting candidates using Natural Language Processing techniques to grade interview question and answers while keeping the integrity of an interview process intact.</div>
+            <div class="puba">Prof. Debarka Sengupta*, Najeeb Khan*</div>
+            <!-- <div class="pubv">ICLR 2016 Workshop</div> -->
+            <div class="publ">
+              <ul>
+                <!-- <li><a href="http://arxiv.org/abs/1506.02078">PDF</a></li> -->
+                <!-- <li><a href="http://github.com/karpathy/char-rnn">Code (char-rnn)</a></li> -->
+                <!-- <li><a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">Blog Post</a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <img src="{% static 'resume/img/autointraviewer_2.png' %}" style="max-width:100%; margin-top:30px;">
+      </div>
+    </div>
+    
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="{% static 'resume/img/collage.jpg' %}" style="max-width:90%;">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">SpamNet: Spam Classification Using Deep Learning</div>
+            <div class="pubd">This project was part of the Smart India Hackathon held at Ahmedabad, Gujarat under the aegis of Indian Space Research Organisation and All India Council of Technical Education (AICTE), Government of India. The project is contiued as a collaboration between ISRO and Jamia Millia Islamia aimed at fully deploying a spam classifying agent on ISRO's mail server. </div>
+            <div class="puba">Saquib Ali Khan, Najeeb Khan, Yasir Mir, Zafarullah Mahmood, Suhail Khan</div>
+            <div class="pubv">Smart India Hackathon, 2017</div>
+            <div class="publ">
+              <ul>
+                <!-- <li><a href="cvpr2015.pdf">PDF</a></li> -->
+                <!-- <li><a href="http://cs.stanford.edu/people/karpathy/deepimagesent/">Project</a></li> -->
+                <li><a href="https://github.com/najeeb97khan/SpamNet">Code (Github)</a></li>
+                <!-- <li><a href="http://cs.stanford.edu/people/karpathy/deepimagesent/rankingdemo">Retrieval demo</a></li> -->
+                <!-- <li><a href="http://techtalks.tv/talks/deep-visual-semantic-alignments-for-generating-image-descriptions/61593/">Presentation</a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	<section id="work" name="work"></section>
-	<!--PORTFOLIO DESCRIPTION -->
-	<div class="container desc">
-		<div class="row">
-				<div class="col-lg-2 col-lg-offset-1">
-					<h5>BLOGS</h5>
-				</div>
-				<div class="col-lg-6">
-					<p><img class="img-responsive" src="{% static 'resume/img/port01.jpg' %}" alt=""></p>
-				</div>
-				<div class="col-lg-3">
-					<p>GETTING STARTED WITH NEURAL NETWORKS</p>
-				<p><more>I have written a blog for beginners describing explicitly how to get started with Neural Networks using Python binded with Keras as a Neural Networks package. The blog gives an insight into solving and approacgin problems on Kaggle Inc. which hosts competitions over large datasets. Give it a try at: <br/><a href='http://najeeb97khan.github.io/started'>najeeb97khan.github.io/started</a><br/><br/>
-					<sm><i class="icon-tag"></i> design</sm></more> 
-				</p>
-				</div>
-		
-		</div><!--/.row -->
-		<br>
-		<br>
-	</div><!--/.container -->
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+          <img src="{% static 'resume/img/raop.jpg' %}">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Random Acts of Pizza: Demystifying Altruism Using Machine Learning</div>
+            <div class="pubd">
+            	Using Machine Learning to predict what factors constitute for a request to get fulfilled. This project was part of a Kaggle Competition that can be found <a href="https://www.kaggle.com/c/random-acts-of-pizza">here</a>. The project was a great way to get acquainted with simple yet powerful machine learning concepts such as Random Forests, Gradient Boosting Algorithms and incorporating graph theory and summarisation techniques to find intriguing features.
+            </div>
+            <div class="puba">Najeeb Khan, Harsh Vijay, Abhishek Bhatt</div>
+            <div class="pubv">Winters 2017</div>
+            <div class="publ">
+              <ul>
+                <!-- <li><a href="http://arxiv.org/abs/1409.0575">PDF</a></li> -->
+                <li><a href="https://github.com/najeeb97khan/Random_Acts_Of_Pizza">Blog Post</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+          <img src="{% static 'resume/img/localise.jpg' %}" style="max-width:90%;">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">LocaliseNet: Object Localisation Using Neural Networks</div>
+            <div class="pubd">
+              Object localisation dwelves into some more complexities of computer vision. Under this task, the aim is to classify the image and also provide the coordinates of a rectangular box around the object of interest. To solve this problem, I used a simple Convolution Neural Network with two heads mounted upon the series of conv-maxpool layer. One of the heads performs the classification of the image according to the 20 categories found in the VOC 2007 dataset. The other head performs regression to compute the coordinates of the rectangular box. The ConvNet consists of two convolution layer with relu non linearity and max pool layers.</div>
+            <div class="puba">Najeeb Khan</div>
+            <!-- <div class="pubv"></div> -->
+            <div class="publ">
+              <ul>
+                <!-- <li><a href="nips2014.pdf">PDF</a></li> -->
+                <!-- <li><a href="nips2014_supp.pdf">Supplemental</a></li> -->
+                <li><a href="https://github.com/najeeb97khan/LocaliseNet">Code</a></li>
+                <!-- <li><a href="http://cs.stanford.edu/people/karpathy/defragvis/">Web Demo of Results</a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="{% static 'resume/img/convnet.jpg' %}" style="max-width:85%;">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">ConvNets: An extensive repository of constructing and exploring ConvNets</div>
+            <div class="pubd">Convolutional Neural Nets are state of the art technique for image recognition and classification. They are able to intrinsically generate powerful feature hierarchy to correctly classify images into said categories. Although computationally expensive and require GPUs to run on large datasets, CNNs have changed the game in both image classification and object detection methods</div>
+            <div class="puba">Najeeb Khan</div>
+            <!-- <div class="pubv">CVPR 2014 (Oral)</div> -->
+            <div class="publ">
+              <ul>
+                <li><a href="https://github.com/najeeb97khan/ConvNets">Code</a></li>
+                <!-- <li><a href="http://cs.stanford.edu/people/karpathy/deepvideo/deepvideo_cvpr2014.pdf">PDF</a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="{% static 'resume/img/shapley.jpg' %}" style="max-widht:90%;">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Improving Extractive Summarisation using Information Diffusion Model</div>
+            <div class="pubd">Simple extractive summarisation techniques generate summaries which are localised on the basis of where information is concentrated. This localisation, apart from making summary "robotic", also tends to leave out information which is sparse but necessary. Applying Information Diffusion Models to this task provides a generalised summary of the documents whilst also giving it a "natural" touch.</div>
+            <div class="puba">Zafarullah Mahmood, Najeeb Khan, Yasir Mir</div>
+            <div class="pubv">Summers 2016</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://github.com/najeeb97khan/ShapSum">Repository</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="{% static 'resume/img/frizgo.jpg' %}">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">FrizGo: An online e-commerce portal as part of Database Management Systems Project</div>
+            <div class="pubd">
+              An online retail management system based on PHP and HTML/CSS/JavaScript. FrizGo consist of a beautiful front end that runs on JavaScript, HTML and CSS. The backend is powered exclusively by PHP and MySQL as the database query language
+            </div>
+            <div class="puba">Najeeb Khan, Zaki Mustafa Farooqi</div>
+            <div class="pubv">Semester IV, 2016</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://github.com/najeeb97khan/FrizGO">Code</a></li>
+              </ul>
+              <ul>
+                <li><a href="https://frizgo.000webhostapp.com/">Website</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<hr class="soft"> 
+<div class="container">
+
+  <h2>Skills</h2>
+  <div class="row">
+    <div class="col-md-6">
+
+      <div class="miscitem">
+        <div class="miscimg">
+          <img src="{% static 'resume/img/python.png' %}" class="img-circle">
+        </div>
+        <div class="miscd">
+          <strong>Python:</strong> Upto 3 years of experience with Python with a great number of associated libraries.
+        </div>
+      </div>
+
+      <div class="miscitem">
+        <div class="miscimg">
+          <img src="{% static 'resume/img/ml.png' %}" class="img-circle">
+        </div>
+        <div class="miscd">
+          <strong>Machine Learning: </strong>Hands on experience with Applied Machine Learning with appreciative background with statistics.  
+        </div>
+      </div>
+
+      <div class="miscitem">
+        <div class="miscimg">
+          <img src="{% static 'resume/img/la.png' %}" class="img-circle">
+        </div>
+        <div class="miscd">
+          <strong>Linear Algebra </strong>Took up Higher Engineering Mathematics during UnderGrad securing top grade in Numerical Analysis.  
+        </div>
+      </div>
+
+      <div class="miscitem">
+        <div class="miscimg">
+          <img src="{% static 'resume/img/pandas.jpg' %}" class="img-circle">
+        </div>
+        <div class="miscd">
+          <strong>Scikit-Learn, Numpy and Pandas: </strong>Quick Machine Learning model prototyping and Data handling.  
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-6">
+      
+      <div class="miscitem">
+        <div class="miscimg">
+          <img src="{% static 'resume/img/tf.png' %}" class="img-circle">
+        </div>
+        <div class="miscd">
+          <strong>TensorFlow: </strong>Fluidic development of models for Deep Learning using Data Flow Graphs.  
+        </div>
+      </div>
+
+      <div class="miscitem">
+        <div class="miscimg">
+          <img src="{% static 'resume/img/django.png' %}" class="img-circle">
+        </div>
+        <div class="miscd">
+          <strong>Django: </strong>Creative hands with Python Web Development Framework.  
+        </div>
+      </div>
+
+      <div class="miscitem">
+        <div class="miscimg">
+          <img src="{% static 'resume/img/web.jpg' %}" class="img-circle">
+        </div>
+        <div class="miscd">
+          <strong>HTML/CSS: </strong>Front-End Development using popular HTML5 and CSS3.  
+        </div>
+      </div>
+
+      <div class="miscitem">
+        <div class="miscimg">
+          <img src="{% static 'resume/img/js.png' %}" class="img-circle">
+        </div>
+        <div class="miscd">
+          <strong>JavaScript: </strong>Still learning this awesome web development language. Hope to master it soon!  
+        </div>
+      </div>
+
+    </div>
+
+  </div>      
+</div>
+
+<hr class="soft">
+
+<div class="container">
+  <h2>Blogs</h2>
+  <div class="row">
+  <!-- <div class="col-md-10"> -->
+    <div class="pp">
+      <a href="http://www.arxiv-sanity.com/">
+        <img src="{% static 'resume/img/nn.png' %}" class="imgb">
+      </a>
+      <div class="ppt">Getting Started with Neural Networks</div>
+      <div class="ppd">
+      
+        I have written a blog for beginners describing explicitly how to get started with Neural Networks using Python binded with Keras as a Neural Networks package. The blog gives an insight into solving and approacgin problems on Kaggle Inc. which hosts competitions over large datasets. Give it a try at: <a href="najeeb97khan.github.io/started">najeeb97khan.github.io/started</a>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="soft">
+
+<div id="footer">
+  <div class="container" align="center">
+    <p class="text-muted credit">Thanks to <a href="https://cs.stanford.edu/people/karpathy/">Andrej Karpathy </a> for making this awesome template which I could use for my website. I hope it was not copyrighted!</p>
+  </div>
+</div>
+
+<br><br>
 {% endblock %}

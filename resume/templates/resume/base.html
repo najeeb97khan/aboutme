@@ -1,103 +1,75 @@
-{% load static %}
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Najeeb Khan Website</title>
+  <link rel="shortcut icon" type="image/png" href="{% static 'resume/img/favicon.ico' %}"/>
+  <link href="{% static 'resume/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+  <link href="{% static 'resume/css/style.css' %}" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
 
-    <title>Curriculum Vitae</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="{% static 'resume/css/bootstrap.css' %}" rel="stylesheet">
+<!-- Tracking code -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3698471-13']);
+  _gaq.push(['_trackPageview']);
 
-    <!-- Custom styles for this template -->
-    <link href="{% static 'resume/css/main.css' %}" rel="stylesheet">
-    
-	<link rel="stylesheet" href="{% static 'resume/css/font-awesome.min.css' %}">
-    
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-    
-    <script src="{% static 'resume/js/jquery.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'resume/js/smoothscroll.js' %}"></script> 
-    <script src="{% static 'resume/js/Chart.js' %}"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body data-spy="scroll" data-offset="0" data-target="#nav">
-
-	<div id="section-topbar">
-		<div id="topbar-inner">
-			<div class="container">
-				<div class="row">
-					<div class="dropdown">
-						<ul id="nav" class="nav">
-							<li class="menu-item"><a class="smoothScroll" href="{% url 'index' %}" title="Home"><i class="icon-file"></i></a></li>
-							<li class="menu-item"><a class="smoothScroll" href="http://najeeb97khan.github.io" title="Blogs"><i class="icon-briefcase"></i></a></li>
-							<li class="menu-item"><a class="smoothScroll" href="{% url 'contact' %}" title="Contact"><i class="icon-envelope"></i></a></li>
-						</ul><!--/ uL#nav -->
-					</div><!-- /.dropdown -->
-
-					<div class="clear"></div>
-				</div><!--/.row -->
-			</div><!--/.container -->
-
-			<div class="clear"></div>
-		</div><!--/ #topbar-inner -->
-	</div><!--/ #section-topbar -->
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<div<body onload="start()">
 
 {% block content %}
 {% endblock %}
 
-<section id="contact" name="contact"></section>
-  <!--FOOTER DESCRIPTION -->
-  <div id="footwrap">
-    <div class="container">
-      <div class="row">
-      
-        <div class="col-lg-2 col-lg-offset-1">
-          <h5>CONTACT</h5>
-        </div>
-        <div class="col-lg-6">
-          <p><t>Email</t><br/>
-            najeeb.khan96@gmail.com <br/>
-          </p>
-          <p><t>Department</t><br/>
-             Deptt. Of Computer Engineering<br/>
-            F/o Engineering and Technology <br/>
-            Jamia Millia Islamia<br/>
-            New Delhi,India. <br/>
-          </p>
-          <p><t>Phone</t><br/>
-            +91 9990570079 <br/>
-          </p>
-        </div>
-        <div class="col-lg-3">
-          <p><sm>SOCIAL LINKS</sm></p>
-          <p>
-            <a href="https://github.com/najeeb97khan"><i class="icon-github"></i></a>
-            <a href="https://twitter.com/Najeeb1997"><i class="icon-twitter"></i></a>
-            <a href="https://www.facebook.com/najeeb.khan96"><i class="icon-facebook"></i></a>
-            <a href="https://www.linkedin.com/in/najeeb-khan-b54492129"><i class="icon-linkedin"></i></a>
+<!-- place js at end for faster loading -->
+<script src="{% static 'resume/js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'resume/js/bootstrap.min.js' %}"></script>
+<script>
 
-          </p>
-        </div>
-      </div><!--/.row -->
-    </div><!--/.container -->
-  </div><!--/ #footer -->
-  
+var more_projects_shown = false;
+function start() {
+  $("#showmoreprojects").click(function() {
+    if(!more_projects_shown) {
+      $("#moreprojects").slideDown('fast', function() {
+        $("#showmoreprojects").text('hide');
+      });
+      more_projects_shown = true;
+    } else {
+      $("#moreprojects").slideUp('fast', function() {
+        $("#showmoreprojects").text('show more');
+      });
+      more_projects_shown = false;
+    }
+  });
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{% static 'resume/js/bootstrap.js' %}"></script>
-  </body>
+  var more_pubs_shown = false;
+  $("#showmorepubs").click(function() {
+    if(!more_pubs_shown) {
+      $("#morepubs").slideDown('fast', function() {
+        $("#showmorepubs").text('hide');
+      });
+      more_pubs_shown = true;
+    } else {
+      $("#morepubs").slideUp('fast', function() {
+        $("#showmorepubs").text('show more');
+      });
+      more_pubs_shown = false;
+    }
+  });
+
+}
+
+</script>
+
+</body>
 </html>
